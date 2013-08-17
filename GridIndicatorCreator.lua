@@ -25,27 +25,27 @@ if not Grid or not LibStub then
 	return
 end
 
-local _, GIS = ...
+local _, GIC = ...
 
 local GridFrame = Grid:GetModule("GridFrame");
 
-local GridIndicatorStudio = GridFrame:NewModule("GridIndicatorStudio")
-GIS.GridIndicatorStudio   = GridIndicatorStudio
+local GridIndicatorCreator = GridFrame:NewModule("GridIndicatorCreator")
+GIC.GridIndicatorCreator   = GridIndicatorCreator
 
-GridIndicatorStudio.SharedMedia     = LibStub("LibSharedMedia-3.0")
-GridIndicatorStudio.SmoothStatusBar = LibStub("LibSmoothStatusBar-1.0", true)
+GridIndicatorCreator.SharedMedia     = LibStub("LibSharedMedia-3.0")
+GridIndicatorCreator.SmoothStatusBar = LibStub("LibSmoothStatusBar-1.0", true)
 
 local settings
 
-GridIndicatorStudio.defaultDB = {
-	GridIndicatorStudio = {
+GridIndicatorCreator.defaultDB = {
+	GridIndicatorCreator = {
 		
 	}
 }
 
-Grid.options.args["GridIndicatorStudio"] = {
+Grid.options.args["GridIndicatorCreator"] = {
 	type = "group",
-	name = "Indicator Studio",
+	name = "Indicator Creator",
 	desc = "Manage additional indicators",
 	order = 2,
 	args = {
@@ -54,8 +54,8 @@ Grid.options.args["GridIndicatorStudio"] = {
 
 -------------------------------------------------------------------------------
 
-function GridIndicatorStudio:OnInitialize()
-	GridFrame:RegisterModule("GridIndicatorStudio", self)
+function GridIndicatorCreator:OnInitialize()
+	GridFrame:RegisterModule("GridIndicatorCreator", self)
 	
 	hooksecurefunc(GridFrame, "InitializeFrame", self.InitializeFrame)
 	hooksecurefunc(GridFrame, "UpdateOptionsForIndicator", self.UpdateOptionsForIndicator)
@@ -63,31 +63,31 @@ function GridIndicatorStudio:OnInitialize()
 	hooksecurefunc(GridFrame.prototype, "SetIndicator", self.SetIndicator)
 	hooksecurefunc(GridFrame.prototype, "ClearIndicator", self.ClearIndicator)
 	
-	settings = GridIndicatorStudio.db.profile.GridIndicatorStudio
+	settings = GridIndicatorCreator.db.profile.GridIndicatorCreator
 end
 
-function GridIndicatorStudio:OnEnable()
+function GridIndicatorCreator:OnEnable()
 end
 
-function GridIndicatorStudio:OnDisable()
+function GridIndicatorCreator:OnDisable()
 end
 
-function GridIndicatorStudio:Reset()
+function GridIndicatorCreator:Reset()
 end
 
-function GridIndicatorStudio:InitializeFrame(frame)
+function GridIndicatorCreator:InitializeFrame(frame)
 	-- NYI
 end
 
-function GridIndicatorStudio:UpdateOptionsForIndicator(indicator, name, order)
+function GridIndicatorCreator:UpdateOptionsForIndicator(indicator, name, order)
 	local menu = Grid.options.args.GridIndicator.args
 	-- NYI
 end
 
-function GridIndicatorStudio:SetIndicator(indicator, color, text, value, maxValue, texture, start, duration, stacks)
+function GridIndicatorCreator:SetIndicator(indicator, color, text, value, maxValue, texture, start, duration, stacks)
 	-- NYI
 end
 
-function GridIndicatorStudio:ClearIndicator(indicator)
+function GridIndicatorCreator:ClearIndicator(indicator)
 	-- NYI
 end

@@ -1,5 +1,5 @@
 ## Interface: 50300
-## Title: GridIndicatorStudio
+## Title: GridIndicatorCreator
 ## Notes: Enable you to build any number of Grid indicators from a single addon
 ## Dependencies: Grid
 ## OptionalDeps: LibStub, LibSmoothStatusBar-1.0
@@ -9,7 +9,7 @@ LibStub\LibStub.lua
 LibSmoothStatusBar-1.0\LibSmoothStatusBar-1.0.xml
 #@end-no-lib-strip@
 
-GridIndicatorStudio.lua
+GridIndicatorCreator.lua
 
 Indicator_Simple.lua
 Indicator_Text.lua
